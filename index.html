@@ -51,9 +51,14 @@
     <span>🎶</span>
     <span id="numero">0</span>
 </button>
+<button>
+    <span>💿​</span>
+    <span id="numero">0</span>
+</button>
 
 <script>
-    const botao = document.querySelector("button");
+    const botoes = document.querySelectorAll("main button");
+    botoes.forEach(function (botao){
 
     botao.addEventListener("click", botaoClicado);
 
@@ -62,7 +67,7 @@
 
         let texto = botao.querySelector("#numero");
         texto.textContent++;
-    }
+    }});
 </script>
 
 
