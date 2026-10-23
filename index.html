@@ -76,34 +76,64 @@
 </script>
 </article>
 
+<style>
+    .titulo-principal {
+        font-family: Arial, sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .lead {
+        font-family: Georgia, serif;
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: #555;
+    }
+</style>
+</article>
+<style>
+    .titulo-principal {
+        font-family: Arial, sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .lead {
+        font-family: Georgia, serif;
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: #555;
+    }
+</style>
 
-  <article>
-<img src="imagem-blog2.webp" alt="Mesa decorada com temática musical contendo discos de vinil, toca-discos, notebook, instrumentos e fones de ouvido. O plano de fundo mistura a ambientação do estúdio com artes abstratas e notas musicais nas cores vinho bordô e rosa claro.">
-       <div>
-           <h2>Dono de diversos hits como Happy, Fun, Fun, Fun e muitos outros!</p>
-           <p class="">Por: Soso Lessak</p>
-           <button>
-    <span>🎶</span>
-    <span id="numero">0</span>
-</button>
-<button>
-    <span>💿​</span>
-    <span id="numero">0</span>
-</button>
+<article>
+    <article>
+    <img src="imagem-blog2.webp" alt="Mesa decorada com temática musical contendo discos de vinil, toca-discos, notebook, instrumentos e fones de ouvido. O plano de fundo mistura a ambientação do estúdio com artes abstratas e notas musicais nas cores vinho bordô e rosa claro.">
+    <div>
+        <h1>Conheça o cantor-compositor e rapper americano Pharrel Williams</h1>
 
-<script>
-    const botoes = document.querySelectorAll("main button");
-    botoes.forEach(function (botao){
+        <h2>Dono de diversos hits como Happy, Fun, Fun, Fun e muitos outros!</h2>
+        <p>Por: Soso Lessak</p>
+        
+        <button type="button" class="btn-emoji">
+            <span>🎶</span>
+            <span class="numero">0</span>
+        </button>
+        <button type="button" class="btn-emoji">
+            <span>💿​</span>
+            <span class="numero">0</span>
+        </button>
+    </div>
 
-    botao.addEventListener("click", botaoClicado);
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botoes = document.querySelectorAll(".btn-emoji");
 
-    function botaoClicado() {
-        console.log("fui clicado");
-
-        let texto = botao.querySelector("#numero");
-        texto.textContent++;
-    }});
-</script>
-</article>  
-
-
+            botoes.forEach(function (botao) {
+                botao.addEventListener("click", function () {
+                    let texto = botao.querySelector(".numero");
+                    let valorAtual = parseInt(texto.textContent) || 0;
+                    texto.textContent = valorAtual + 1;
+                });
+            });
+        });
+    </script>
+</article>
